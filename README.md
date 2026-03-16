@@ -1,4 +1,4 @@
-# Smart-Door-Access-Control-using-STM32F411VET6-HC-05-Bluetooth-Module-and-SSD1306-OLED-Display
+# REAL-TIME EMBEDDED SECURITY
 
 ## Aim
 To design a Bluetooth-based password authentication system using the STM32F411VET6 microcontroller where a user enters a password through a Bluetooth terminal via the HC‑05 Bluetooth Module. The system verifies the password and displays the status on an SSD1306 OLED Display while controlling LEDs and a buzzer to indicate access granted or denied.
