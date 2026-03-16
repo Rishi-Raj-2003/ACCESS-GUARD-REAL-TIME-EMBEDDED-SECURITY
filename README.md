@@ -31,7 +31,7 @@ To design a Bluetooth-based password authentication system using the STM32F411VE
 
 ## Connections
 ### OLED Display (SSD1306 OLED Display – I2C)
-https://www.google.com/imgres?q=oled%20ssd1306&imgurl=https%3A%2F%2Fdocs.sunfounder.com%2Fprojects%2Fumsk%2Fen%2Flatest%2F_images%2F27_OLED.png&imgrefurl=https%3A%2F%2Fdocs.sunfounder.com%2Fprojects%2Fumsk%2Fen%2Flatest%2F01_components_basic%2F27-component_oled.html&docid=vagUMotXvaueZM&tbnid=3AXxjSBX9fX5KM&vet=12ahUKEwjoyK_FjqSTAxUkcGwGHX0TF24QnPAOegQIGhAB..i&w=800&h=700&hcb=2&ved=2ahUKEwjoyK_FjqSTAxUkcGwGHX0TF24QnPAOegQIGhAB
+
 * VCC → 3.3V (STM32)
 * GND → GND
 * SCL → PB8 (I2C1_SCL)
