@@ -3,14 +3,35 @@
 ## Aim
 To design a Bluetooth-based password authentication system using the STM32F411VET6 microcontroller where a user enters a password through a Bluetooth terminal via the HC‑05 Bluetooth Module. The system verifies the password and displays the status on an SSD1306 OLED Display while controlling LEDs and a buzzer to indicate access granted or denied.
 
-## Materials Required
-STM32F411VET6 development board, HC‑05 Bluetooth Module, SSD1306 OLED Display, 4-pin push button, green LED, red LED, buzzer, resistors, connecting wires, and power supply.
+## Components
+* hc-05
+* oled
+* 4 pin push button
+* buzzer
+* green led
+* red led
+
 
 ## Procedure
-The STM32 microcontroller communicates with the HC-05 module via UART to receive the password from a Bluetooth terminal. The entered password is displayed on the OLED and verified by the system; if correct, access is granted, the green LED turns on, and a timestamp is sent via Bluetooth, after which the door closes (red LED on) after 5 seconds when the push button is pressed. If the password is incorrect, the buzzer and red LED activate and the OLED displays “Access Denied” before returning to the password entry screen.
+* The STM32F411VET6 microcontroller communicates with the HC-05 Bluetooth module using UART communication to receive the password from a Bluetooth terminal.
+* The STM32F411VET6 microcontroller communicates with the HC-05 Bluetooth module using UART communication to receive the password from a Bluetooth terminal.
+* The user enters the password through the Bluetooth terminal connected to the HC-05 module.
+* The entered password is displayed on the SSD1306 OLED display for user verification.
+* If the password is correct:
+* The OLED displays “Access Granted”.
+* The green LED turns ON indicating the door is open.
+* The current timestamp is sent to the Bluetooth terminal.
+* When the push button is pressed, the system waits 5 seconds and then the red LED turns ON, indicating the door is closing.
+* If the password is incorrect.
+* The buzzer turns ON as an alert.
+* The red LED turns ON.
+* The OLED displays “Access Denied”.
+* After displaying the error message, the system returns to the password entry screen so that the user can try entering the password ag
+  
 
 ## Connections
 ### OLED Display (SSD1306 OLED Display – I2C)
+https://www.google.com/imgres?q=oled%20ssd1306&imgurl=https%3A%2F%2Fdocs.sunfounder.com%2Fprojects%2Fumsk%2Fen%2Flatest%2F_images%2F27_OLED.png&imgrefurl=https%3A%2F%2Fdocs.sunfounder.com%2Fprojects%2Fumsk%2Fen%2Flatest%2F01_components_basic%2F27-component_oled.html&docid=vagUMotXvaueZM&tbnid=3AXxjSBX9fX5KM&vet=12ahUKEwjoyK_FjqSTAxUkcGwGHX0TF24QnPAOegQIGhAB..i&w=800&h=700&hcb=2&ved=2ahUKEwjoyK_FjqSTAxUkcGwGHX0TF24QnPAOegQIGhAB
 * VCC → 3.3V (STM32)
 * GND → GND
 * SCL → PB8 (I2C1_SCL)
